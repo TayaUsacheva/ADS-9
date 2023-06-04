@@ -5,6 +5,33 @@
 #include  <cstdlib>
 #include  "bst.h"
 
+bool isLetter(char ch){
+    if(ch >= 'a' && ch <= 'z')
+        return ch;
+    else if (ch >= 'A' && ch <= 'Z')
+        return tolower(ch);
+}
+
 BST<std::string> makeTree(const char* filename) {
-  // поместите сюда свой код
+  BST <std::string> tree;
+  std::ifstream file(filename);
+  if (!file) {
+    std::cout << "File error!" << std::endl;
+    return tree;
+  } else {
+     while (!file.eof()) {
+     std::string temp = "";
+     while (true) {
+       char c;
+       c = file.get();
+       if (isLetter(ch))
+         temp += ch;
+        else {
+            break;
+        }
+    }
+        tree.add(temp);
+    }
+        return tree;
+    }
 }
