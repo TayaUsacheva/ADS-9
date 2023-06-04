@@ -21,9 +21,9 @@ class BST {
         dpth_Tree = depth;
       root->left = root->right = nullptr;
     } else if (value < root->value) {
-      root->left = addNode(root->left, value, ++depth);
+      root->left = addNode(root->left, value, depth++);
     } else if (value > root->value) {
-      root->right = addNode(root->right, value, ++depth);
+      root->right = addNode(root->right, value, depth++);
     } else {
       root->counter++;
     }
