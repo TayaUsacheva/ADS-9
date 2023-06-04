@@ -29,10 +29,9 @@ BST<std::string> makeTree(const char* filename) {
            } else {
                 break;
             }
-       else {
-           tree.add(temp);
-           temp.clear();
-       }
+       tree.add(temp);
+       temp.clear();
+      }
     }
     }
         file.close();
