@@ -25,11 +25,11 @@ class BST {
     } else if (value > root->value) {
       root->right = addNode(root->right, value, depth++);
     } else {
-      root->counter ++;
+      root->counter++;
     }
     return root;
   }
-  
+
   int searchTree(Node* root, T value) {
     if (root == nullptr) {
       return -1;
@@ -48,7 +48,7 @@ class BST {
  public:
   BST(): root(nullptr) {}
   void add(T value) {
-    root = addNode(root, value);
+    root = addNode(root, value, 0);
   }
   int depth() {
     return dpth_Tree;
