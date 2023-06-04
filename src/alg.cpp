@@ -30,6 +30,7 @@ BST<std::string> makeTree(const char* filename) {
     }
         tree.add(temp);
     }
+        file.close();
         return tree;
     }
 }
