@@ -23,12 +23,14 @@ BST<std::string> makeTree(const char* filename) {
      while (true) {
        char c;
        c = file.get();
-       if (isLetter(c))
+       if (isLetter(c)) {
            temp += c;
-       else
+       }
+       else {
            tree.add(temp);
-           temp.clear();         
-    }        
+           temp.clear();
+       }
+    }
     }
         file.close();
         return tree;
