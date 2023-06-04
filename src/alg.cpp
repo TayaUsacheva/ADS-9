@@ -5,10 +5,9 @@
 #include  <cstdlib>
 #include  "bst.h"
 
-bool isLetter(char ch){
-    if(ch >= 'a' && ch <= 'z')
-        return ch;
-    else if (ch >= 'A' && ch <= 'Z')
+bool isLetter(char ch) {
+    return ch >= 'a' && ch <= 'z';
+    if (ch >= 'A' && ch <= 'Z')
         return tolower(ch);
 }
 
@@ -24,8 +23,8 @@ BST<std::string> makeTree(const char* filename) {
      while (true) {
        char c;
        c = file.get();
-       if (isLetter(ch))
-         temp += ch;
+       if (isLetter(c))
+            temp += c;
         else {
             break;
         }
