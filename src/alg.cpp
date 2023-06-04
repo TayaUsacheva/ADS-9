@@ -26,10 +26,9 @@ BST<std::string> makeTree(const char* filename) {
        } else if (c >= 'A' && c <= 'Z') {
            c = tolower(c);
            temp += c;
-                    } else {
-                        break;
-                     }
-                }
+           } else {
+                break;
+            }
        else {
            tree.add(temp);
            temp.clear();
