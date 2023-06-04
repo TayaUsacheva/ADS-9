@@ -24,10 +24,9 @@ BST<std::string> makeTree(const char* filename) {
        char c;
        c = file.get();
        if (isLetter(c))
-            temp += c;
-        else {
-            break;
-        }
+           temp += c;
+       else
+           break;
     }
         tree.add(temp);
     }
