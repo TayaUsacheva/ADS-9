@@ -12,7 +12,7 @@ class BST {
   Node* root;
   int dpth_Tree = -1;
   Node* addNode(Node* root, T value, int depth) {
-    if () {
+    if (nullptr == root) {
       root = new Node;
       root->value = value;
       root->counter = 1;
